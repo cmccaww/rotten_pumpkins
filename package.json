@@ -17,10 +17,16 @@
   },
   "homepage": "https://github.com/Jese310S/rotten_pumpkins#readme",
   "dependencies": {
+    "connect-mongo": "^3.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
+    "mongoose": "^5.10.9",
+    "mongoose-bcrypt": "^1.9.0",
     "nodemon": "^2.0.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "startbootstrap-clean-blog": "^5.0.9"
   }
 }
