@@ -2,7 +2,7 @@
 {{>header}}
 
 <!-- Main Content -->
-<div class="container">
+{{!-- <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
@@ -12,7 +12,18 @@
             </ul>
           </a>
         </div>
-        <hr>
+        <hr> --}}
+
+        <!-- Jombotron section which has the search box -->
+        <div class="container">
+          <div class="jumbotron">
+            <h3 class="text-center">Search for Halloween Movies</h3>
+            <form id="searchForm">
+              <input type="text" class="form-control" id="searchText" placeholder="Search Movies....">
+            </form>
+          </div>
+        </div>
+        
       <!-- Pager -->
       <div class="clearfix">
         <a class="btn btn-primary float-right" href="#">search &rarr;</a>
