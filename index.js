@@ -1,6 +1,9 @@
 const express = require('express');
 const exphbs  = require('express-handlebars');
 const path = require('path');
+// const postRouter = require('./routes/posts_routes');
+const pageRouter = require('./routes/page_routes');
+const authRouter = require('./routes/auth_routes');
  
 const app = new express();
 
@@ -21,3 +24,7 @@ app.get('/search', function (req, res) {
 app.listen(3000, () => {
     console.log('App listening on port 3000')
 });
+
+app.use("/", pageRouter)
+// app.use('/posts', postRouter);
+app.use("/user", authRouter)
