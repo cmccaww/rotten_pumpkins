@@ -12,7 +12,7 @@ const registerCreate = async (req, res) =>{
     // attach the registered user to the session
     req.session.user = user
     console.log(req.session.user)
-    res.redirect("/dashboard")
+    res.redirect("/")
 }
 
 const logOut =(req,res) =>{
@@ -24,6 +24,7 @@ const logOut =(req,res) =>{
 const loginNew = (req,res) => {
         res.render("auth/login")
 }
+
 const loginCreate = async (req,res) => {
     // res.json(req.body)
     // fetch the user
@@ -38,7 +39,7 @@ const loginCreate = async (req,res) => {
         return res.render("auth/login", {error: "invalid password" })
     }
     req.session.user = user
-    res.redirect("/dashboard", {email: user.email})
+    res.redirect("/", {email: user.email})
 }
 
 module.exports = {

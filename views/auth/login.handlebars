@@ -1,22 +1,20 @@
-
 {{>header}}
 
-
-<h1> Login </h1>
-{{#if error}}
-    <p>Error: {{error}} </p>
-{{/if}}
-
-<form method="post" action="/user/login">
-    <div>
-        <label> Email</label>
-        <input type="email" name="email" />
+<!-- Main Content -->
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="log-form">
+            <h2>Login to your account</h2>
+            <form>
+                <label>Email</label>
+                <input type="email" title="email" placeholder="email" />
+                <label>Password</label>
+                <input type="password" title="password" placeholder="password" />
+                <button type="submit" class="btn">Login</button>
+                <a class="forgot" href="#">Forgot Username?</a>
+            </form>
+        </div>
+        {{!-- </div> --}}
     </div>
-    <div>
-        <label> Password</label>
-        <input type="password" name="password" />
-    </div>
-    <div>
-        <input type="submit" value="Login">
-    </div>
-</form>
+  </div>
