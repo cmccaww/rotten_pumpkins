@@ -2,6 +2,17 @@ var express = require('express');
 var router = express.Router();
 const User = require('../models/user')
 
+//GET /Login
+// GET /login
+router.get('/login', function(req, res, next) {
+    return res.render('login', { title: 'Log In'});
+  });
+
+// POST /login
+router.post('/login', function(req, res, next) {
+    return res.send('Logged In');
+});
+
 
 //GET /register
 router.get('/register', function(req, res, next){
@@ -38,7 +49,7 @@ router.post('/register', function(req, res, next){
           return next(error);
         } else {
         //   req.session.userId = user._id;
-          return res.redirect('/profile');
+          return res.redirect('/login');
         }
       });
    
