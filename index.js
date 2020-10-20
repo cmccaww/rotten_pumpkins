@@ -18,6 +18,12 @@ app.use(session({
     saveUninitialized: false
 }));
 
+//make user ID available in templates
+app.use( function(req,res, next){
+    res.locals.currentUser = req.session.userId
+    next();
+})
+
  // include routes
 app.use('/', routes);
 
