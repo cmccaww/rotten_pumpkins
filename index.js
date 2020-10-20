@@ -1,6 +1,5 @@
 
 const express = require('express');
-
 const exphbs  = require('express-handlebars');
 const path = require('path');
 const routes = require('./routes/app_routes.js');
@@ -56,9 +55,9 @@ app.listen(3000, (err) => {
     console.log('App listening on port 3000')
 });
 
-app.use("/", pageRouter)
+// app.use("/", pageRouter)
 // app.use('/posts', postRouter);
-app.use("/user", authRouter)
+// app.use("/user", authRouter)
 
 // // adding the API
 // const result = document.querySelector(".result");
