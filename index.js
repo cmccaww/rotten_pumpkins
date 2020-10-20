@@ -3,7 +3,9 @@ const express = require('express');
 
 const exphbs  = require('express-handlebars');
 const path = require('path');
+const routes = require('./routes/app_routes.js');
 const mongoose = require('mongoose');
+const session = require('express-session')
 mongoose.connect('mongodb://localhost/rotten-pumpkins', { useNewUrlParser: true });
 
 // INITIALIZE BODY-PARSER AND ADD IT TO APP
@@ -12,8 +14,9 @@ const bodyParser = require('body-parser');
 // const mongoStorage = process.env.VAR_MONGO
 // const postRouter = require('./routes/posts_routes');
 
-const pageRouter = require('./routes/page_routes');
-const authRouter = require('./routes/auth_routes');
+// const pageRouter = require('./routes/page_routes');
+// const authRouter = require('./routes/auth_routes');
+
 const methodOverride = require('method-override')
 
 //later will go to models/review.js
