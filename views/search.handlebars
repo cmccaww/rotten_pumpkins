@@ -46,11 +46,11 @@ $(document).ready(function(){
           console.log(data)
 
           result = `
-          <img style="float.left" class="img-thumbnail" width="200" height= "200" src="${data.Poster}"/>
-          <h2>${data.Title}</h2>
-          <h3>${data.Released}</h3>
-          <h3>${data.Director}</h3>
-          <h3>${data.Actors}</h3>
+          <img style="float.left" class="rounded float-right img-fluid" max-width="100%" height="auto" src="${data.Poster}"/>
+          <h2>Title: ${data.Title}</h2>
+          <h3>Release Date: ${data.Released}</h3>
+          <h3>Director: ${data.Director}</h3>
+          <h3>Actors: ${data.Actors}</h3>
           `
 
           $("#result").html(result)
@@ -61,3 +61,7 @@ $(document).ready(function(){
   })
 })
 </script>
+
+<!--end Main Content-->
+
+{{>footer}}
