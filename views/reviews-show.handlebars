@@ -1,0 +1,21 @@
+{{>header}}
+
+
+<a href="/">Back to Home</a>
+
+<h1>{{review.title}}</h1>
+<h2>{{review.movieTitle}}</h2>
+<p>{{review.description}}</p>
+
+{{!-- <p><a href="/reviews/{{review._id}}/edit">Edit</a></p> --}}
+<p>
+<form method="PUT" action="/reviews/{{review._id}}?_method=PUT">
+    <button type="submit">Edit</button>
+</form>
+</p>
+<!-- Delete button -->
+<p>
+<form method="DELETE" action="/reviews/{{review._id}}?_method=DELETE">
+    <button type="submit">Delete</button>
+</form>
+</p>

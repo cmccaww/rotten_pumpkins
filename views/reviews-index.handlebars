@@ -1,0 +1,14 @@
+
+{{>header}}
+{{>nav}}
+{{!--Reviews Index  --}}
+
+<h1>Reviews</h1>
+<a href="/reviews/new">New Review</a>
+
+{{#each reviews}}
+<h3>{{this.title}}</h3>
+<h4>{{this.movieTitle}}</h4>
+<p>{{this.description}}</p>
+<br>
+{{/each}}
