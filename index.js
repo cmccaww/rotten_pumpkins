@@ -5,7 +5,6 @@ const path = require('path');
 const routes = require('./routes/app_routes.js');
 const mongoose = require('mongoose');
 const session = require('express-session')
-mongoose.connect('mongodb://localhost/rotten-pumpkins', { useNewUrlParser: true });
 const ReviewModel = require('./models/review')
 // INITIALIZE BODY-PARSER AND ADD IT TO APP
 const bodyParser = require('body-parser');
@@ -68,7 +67,7 @@ app.get('/reviews/new', (req, res) => {
 app.post('/reviews', (req, res) => {
   ReviewModel.create(req.body).then((review) => {
     console.log(review)
-    res.redirect(`/reviews/${review._id}`) // Redirect to reviews/:id
+    res.redirect('/reviews') // Redirect to reviews/:id
   }).catch((err) => {
     console.log(err.message)
   })
