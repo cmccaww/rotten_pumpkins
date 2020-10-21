@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+#Atlas MongoDb data storage
+# mongodb+srv://fcc-learning:NSGLsdANLNk5hMxN@cluster1.zc5ys.mongodb.net/rpca?retryWrites=true&w=majority
