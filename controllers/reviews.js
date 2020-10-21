@@ -3,7 +3,7 @@
 
 const Review = require('../models/review');
 
-module.exports = function(app, Review) {
+module.exports = function(app) {
 
 app.get('/reviews', (req, res) => {
     Review.find()

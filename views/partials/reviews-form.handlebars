@@ -1,6 +1,6 @@
 <!-- views/partials/reviews-form.handlebars -->
 
-<fieldset>
+{{!-- <fieldset>
     <legend>{{title}}</legend>
     <!-- TITLE -->
     <p>
@@ -19,4 +19,36 @@
         <label for="review-description">Description</label><br>
         <textarea id="review-description" name="description" rows="10" />{{review.description}}</textarea>
     </p>
-</fieldset>
+</fieldset> --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form action="/reviews" method="POST">
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Title</label>
+                        <input type="text" name="title" placeholder="Your Review" class="form-control">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Description</label>
+                        <input type="text" name="description" placeholder="Description" class="form-control">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Movie Title</label>
+                        <input type="text" name="movie title" placeholder="Movie Title"
+                            class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group my-4 text-center">
+                    <button class="btn btn-primary">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

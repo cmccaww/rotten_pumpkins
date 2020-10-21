@@ -46,11 +46,13 @@ app.listen(3000, (err) => {
 
 
 // review section
-
+app.get('/test', (req, res) => {
+  res.render('test', {title: "New Review"});
+})
 
 // Index. Find method returns a Promise. A Promise is an object that represents represents a value that will be provided in the future. 
 app.get('/reviews', (req, res) => {
-  ReviewModel.find()
+  ReviewModel.find().lean()
     .then(reviews => {
       res.render('reviews-index', { reviews: reviews });
     })
@@ -61,7 +63,7 @@ app.get('/reviews', (req, res) => {
 
 //creating NEW reviews
 app.get('/reviews/new', (req, res) => {
-  res.render('reviews-new', {title: "New Review"});
+  res.render('new', {title: "New Review"});
 })
 
 // CREATE
@@ -87,7 +89,7 @@ app.get('/reviews/:id', (req, res) => {
 
 
 // EDIT
-app.get('/reviews/:id/edit', (req, res) => {
+app.get('/reviews/:id', (req, res) => {
   ReviewModel.findById(req.params.id, function(err, review) {
     res.render('reviews-edit', {review: review, title: "Edit Review"});
   })
