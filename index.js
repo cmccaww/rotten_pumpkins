@@ -5,7 +5,6 @@ const path = require('path');
 const routes = require('./routes/app_routes.js');
 const mongoose = require('mongoose');
 const session = require('express-session')
-mongoose.connect('mongodb://localhost/rotten-pumpkins', { useNewUrlParser: true });
 const ReviewModel = require('./models/review')
 // INITIALIZE BODY-PARSER AND ADD IT TO APP
 const bodyParser = require('body-parser');
